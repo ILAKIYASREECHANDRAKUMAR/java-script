@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+<h2>form validation for all letters and numbers</h2>
+</head>
+<body onload='document.form1.text1.focus()'>
+<div class="mail">
+<h2>Enter your detail</h2>
+<form name="form1" action="#">
+<br>NAME and REGNO:<input type='text' name='text1'/></br>
+<br><input type="submit" name="submit" value="Submit" onclick="alphanumeric(document.form1.text1)" />
+</form>
+</div>
+<script>
+function alphanumeric(inputtxt)
+{ 
+var letters = /^[0-9a-zA-Z]+$/;
+if(inputtxt.value.match(letters))
+{
+alert('Your Name and registration number have accepted : you can try another');
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert('Please input alphanumeric characters only');
+return false;
+}
+}
+</script>
+</body>
+</html>

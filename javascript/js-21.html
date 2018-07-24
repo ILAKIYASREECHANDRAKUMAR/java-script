@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+<h1>validation for letters</h1>
+</head>
+<body onload='document.form1.text1.focus()'>
+<div class="mail">
+<h2>Enter your Name</h2>
+<form name="form1" action="#">
+<input type='text' name='text1'/>
+<input type="submit" name="submit" value="Submit" onclick="allLetter(document.form1.text1)" />
+</form>
+</div>
+<script>
+function allLetter(inputtxt)
+      { 
+      var letters = /^[A-Za-z]+$/;
+      if(inputtxt.value.match(letters))
+      {
+      alert('Your name have accepted : you can try another');
+      return true;
+      }
+      else
+      {
+      alert('Please input alphabet characters only');
+      return false;
+      }
+      }
+ </script>
+</body>
+</html>
